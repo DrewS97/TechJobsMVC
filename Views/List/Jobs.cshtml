@@ -1,0 +1,39 @@
+﻿<div class="container body-content">
+
+    <h1>@ViewBag.title</h1>
+
+    @{
+    //TODO #1: Use a loop to display job results in a table.
+    
+        @if(ViewBag.jobs.Count != 0)
+        {
+            @foreach(var job in ViewBag.jobs)
+            {
+                <table class="job-listing">
+                    <tr>
+                        <td>name</td>
+                        <td>@job.Name</td>
+                    </tr>
+                    <tr>
+                        <td>employer</td>
+                        <td>@job.Employer</td>
+                    </tr>
+                    <tr>
+                        <td>location</td>
+                        <td>@job.Location</td>
+                    </tr>
+                    <tr>
+                        <td>position type</td>
+                        <td>@job.PositionType</td>
+                    </tr>
+                    <tr>
+                        <td>core competency</td>
+                        <td>@job.CoreCompetency</td>
+                    </tr>
+                </table>
+            }
+        }   
+    }
+
+
+</div>
